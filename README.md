@@ -1,6 +1,6 @@
-# Scaffold ETH 2 + MACI Voting Template
+# ZK-Voting.Com
 
-Welcome to the Scaffold ETH 2 + MACI Voting Template! This template is a powerful starting point for developers aiming to build decentralized voting applications that prioritize privacy and resist collusion. Combining the rapid development environment of Scaffold ETH with the innovative Minimal Anti-Collusion Infrastructure (MACI), this template offers a robust foundation for creating secure and transparent voting systems on the Ethereum blockchain.
+zk-voting.com is a website where you can vote on hot & debatable topics one at a time with complete privacy. This is powered by Scaffold ETH 2 with the innovative Minimal Anti-Collusion Infrastructure (MACI).
 
 ## Features
 
@@ -76,6 +76,15 @@ In a third terminal, start the NextJS frontend:
 ```bash
 yarn start
 ```
+
+7. **Compute Results**
+
+- In a fourth terminal, clone the maci repo - `git clone git@github.com:privacy-scaling-explorations/maci.git` and then reset to `ee3e2a6` commit using `git reset --hard ee3e2a6` 
+- Copy the zkeys generated from the maci wrapper repo to the cli directory of the maci repo using `cp -r maci-wrapper/packages/hardhat/zkeys maci/cli`. 
+- Install the dependencies using `pnpm i` and build the maci project using `pnpm run build`
+- Copy the new contract addresses from the maci wrapper repo to the maci repo using `cp -r maci-wrapper/packages/contractAddresses.json maci/cli/build/contractAddresses.json`. 
+- After this you should be able to run the commands written in the [maci documentation](https://maci.pse.dev/docs/v1.2/cli).
+- First merge signups, then merge messages, and then generate proof, and upload the tally.json file which is generated in the process to the admin panel after the poll is over.
 
 Navigate to `http://localhost:3000` to interact with your dApp. Modify your app configuration in `packages/nextjs/scaffold.config.ts` and `packages/hardhat/constants.ts` as necessary.
 
