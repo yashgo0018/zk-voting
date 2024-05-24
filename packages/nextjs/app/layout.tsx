@@ -4,8 +4,8 @@ import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithPro
 import { ThemeProvider } from "~~/components/ThemeProvider";
 import "~~/styles/globals.css";
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
+const baseUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   : `http://localhost:${process.env.PORT || 3000}`;
 const imageUrl = `${baseUrl}/thumbnail.jpg`;
 
@@ -43,6 +43,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
+  },
+  other: {
+    "fc:frame": "vNext",
+    "fc:frame:image": imageUrl,
+    "fc:frame:button:1": "Fork On GitHub",
+    "fc:frame:button:1:action": "link",
+    "fc:frame:button:1:target": "https://github.com/yashgo0018/maci-wrapper",
+    "fc:frame:button:2": "Start Voting!",
+    "fc:frame:button:2:action": "link",
+    "fc:frame:button:2:target": "https://zk-voting.com",
   },
 };
 
