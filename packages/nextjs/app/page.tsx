@@ -61,6 +61,7 @@ const Home: NextPage = () => {
 
             <div className="scale-75 bg-slate-800 rounded-3xl flex overflow-hidden w-[90%] mobile:w-[93%] mobile:flex-col">
               <img
+                alt=""
                 className="mobile:w-full w-1/4 lg:w-1/5 mobile:aspect-video aspect-square object-cover object-top"
                 src="/fai.jpg"
               />
