@@ -305,7 +305,7 @@ export default function PollDetail({ id }: { id: bigint }) {
                     : "Poll Results are out"}
                 </div>
               ))}
-            <div className="flex flex-row items-center my-5">
+            <div className="flex flex-row items-center mb-5 mt-10">
               <div className="text-2xl font-bold ">{poll?.name}</div>
             </div>
             {poll?.options.map((candidate, index) => (
