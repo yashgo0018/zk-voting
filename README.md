@@ -97,7 +97,7 @@ The coordinator keys will be stored in the file `packages/hardhat/coordinatorKey
 After setting up the project, you can:
 
 - **Register**: Use the app's interface to register with the MACI contract and gain voting rights.
-- **Create Polls**: As an admin, you can create polls with custom questions and options.
+- **Create Polls**: As an admin, you can create polls with custom questions and options, and one poll will be displayed at a time.
 - **Vote**: Registered voters can participate in polls, utilizing MACI's secure voting mechanism.
 - **View Results**: Access poll outcomes after the voting phase ends.
 - **Admin Dashboard**: Monitor and manage ongoing polls, including viewing detailed poll status.
