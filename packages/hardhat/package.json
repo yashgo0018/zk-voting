@@ -15,7 +15,8 @@
     "lint-staged": "eslint --config ./.eslintrc.json --ignore-path ./.eslintignore",
     "test": "REPORT_GAS=true hardhat test --network hardhat",
     "verify": "hardhat etherscan-verify",
-    "download-zkeys": "./maci-scripts/download_zkeys.sh"
+    "download-zkeys": "./maci-scripts/download_zkeys.sh",
+    "download-prod-zkeys": "./maci-scripts/download_prod_zkeys.sh"
   },
   "dependencies": {
     "@commander-js/extra-typings": "^12.0.1",
