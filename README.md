@@ -35,7 +35,7 @@ yarn install
 In your first terminal window, run:
 
 ```bash
-yarn download-zkeys
+yarn download-prod-zkeys
 ```
 
 3. **Update the environment variables**
