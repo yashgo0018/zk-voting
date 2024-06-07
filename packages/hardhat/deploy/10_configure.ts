@@ -4,6 +4,7 @@ import fs from "fs";
 import { Keypair } from "maci-domainobjs";
 
 import { MACIWrapper, Verifier, VkRegistry } from "../typechain-types";
+import { intStateTreeDepth, messageBatchDepth, messageTreeDepth, voteOptionTreeDepth } from "../constants";
 
 function fetchOrCreateKeyPair(filePath: string) {
   let keypair: Keypair | null = null;
@@ -35,10 +36,10 @@ const deployContracts: DeployFunction = async function (hre: HardhatRuntimeEnvir
 
   const tx = await maci.setConfig(
     {
-      intStateTreeDepth: 1,
-      messageTreeSubDepth: 1,
-      messageTreeDepth: 2,
-      voteOptionTreeDepth: 2,
+      intStateTreeDepth: intStateTreeDepth,
+      messageTreeSubDepth: messageBatchDepth,
+      messageTreeDepth: messageTreeDepth,
+      voteOptionTreeDepth: voteOptionTreeDepth,
     },
     coordinatorKeypair.pubKey.asContractParam(),
     await verifier.getAddress(),
